@@ -16,7 +16,7 @@
     <enum name="MAV_CMD">
       <description>UoB Extensions to MAV_CMD. Commands to be executed by the MAV. They can be executed on user request, or as part of a mission script.</description>
           <entry value="87" name="MAV_CMD_DO_TRAJECTORY">
-            <description>Land using VTOL mode</description>
+            <description>Execute a pre-loaded trajectory</description>
             <param index="1">Empty</param>
             <param index="2">Empty</param>
             <param index="3">Empty</param>
@@ -69,6 +69,33 @@
         <field type="uint8_t" name="target_system">System ID</field>
         <field type="uint8_t" name="target_component">Component ID</field>
         <field type="uint8_t" name="response">Response (See TRAJECTORY_RESPONSE enum)</field>
+    </message>
+    <message id="15006" name="MLAGENT_STATE">
+        <description>ACK message used during trajectory item handling</description>
+        <field type="uint8_t" name="target_system">System ID</field>
+        <field type="uint8_t" name="target_component">Component ID</field>
+        <field type="float" name="x">X position</field>
+        <field type="float" name="y">Y position</field>
+        <field type="float" name="z">Z position</field>
+        <field type="float" name="phi">Roll angle</field>
+        <field type="float" name="theta">Pitch angle</field>
+        <field type="float" name="psi">Yaw angle</field>
+        <field type="float" name="u">U velocity</field>
+        <field type="float" name="v">V velocity</field>
+        <field type="float" name="w">W velocity</field>
+        <field type="float" name="p">Roll rate</field>
+        <field type="float" name="q">Pitch rate</field>
+        <field type="float" name="r">Yaw rate</field>
+        <field type="float" name="sweep">Sweep angle</field>
+        <field type="float" name="elevator">Elevator angle</field>
+        <field type="float" name="tip">Tip angle</field>
+    </message>
+    <message id="15007" name="MLAGENT_ACTION">
+        <description>ACK message used during trajectory item handling</description>
+        <field type="uint8_t" name="target_system">System ID</field>
+        <field type="uint8_t" name="target_component">Component ID</field>
+        <field type="float" name="sweep">Sweep rate</field>
+        <field type="float" name="elevator">Elevator rate</field>
     </message>
   </messages>
 </mavlink>

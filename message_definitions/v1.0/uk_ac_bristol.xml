@@ -47,6 +47,7 @@
         <field type="uint8_t" name="target_component">Component ID</field>
         <field type="float" name="sweep">Sweep rate</field>
         <field type="float" name="elevator">Elevator rate</field>
+        <field type="uint8_t" name="throttle">Cut throttle if zero</field>
     </message>
   </messages>
 </mavlink>

@@ -37,7 +37,9 @@
         <field type="float" name="r">Yaw rate</field>
         <field type="float" name="sweep">Sweep angle</field>
         <field type="float" name="elevator">Elevator angle</field>
+        <field type="float" name="va">Vehicle Airspeed</field>
         <field type="float" name="tip">Tip angle</field>
+        
     </message>
     <message id="15007" name="MLAGENT_ACTION">
         <description>Action returned from OBC</description>
